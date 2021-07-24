@@ -1,0 +1,409 @@
+{
+  "phrases": {
+    "ui": {
+      "job_editor": {
+        "shared": {
+          "search": "Поиск",
+          "cancel": "Отмена",
+          "go_back": "Назад",
+          "save": "Сохранить",
+          "total_price": "Итоговая цена",
+          "total_price_multiplier": "Общая цена @ :multiplier:x",
+          "update_price": "Цена обновления",
+          "free": "Бесплатно"
+        },
+        "steps": {
+          "basics": {
+            "title": "Основы работы",
+            "fields": {
+              "name": {
+                "title": "Имя",
+                "input_placeholder": "Название работы",
+                "hint": {
+                  "valid": ":символы:/:max: символы",
+                  "invalid": "Неправильное имя!"
+                }
+              },
+              "salary": {
+                "title": "Зарплата",
+                "invalid": "Неверная зарплата"
+              },
+              "color": {
+                "title": "Цвет"
+              },
+              "gun_license": {
+                "title": "Лицензия на владение оружием"
+              },
+              "start_health": {
+                "title": "Здоровье на старте",
+                "symbol": "HP"
+              },
+              "start_armor": {
+                "title": "Начальная броня",
+                "symbol": "AP"
+              },
+              "description": {
+                "title": "Описание",
+                "input_placeholder": "Описание вакансии",
+                "hint": {
+                  "valid": ":символы:/:max: символы",
+                  "invalid": "Неправильное описание!"
+                }
+              },
+              "category": {
+                "title": "Категория занятости"
+              }
+            }
+          },
+          "weapons": {
+            "title": "Оружие",
+            "overview": {
+              "empty": ":количество:/:max: {{ grammaticalNumber(weapon, :max:) }}",
+              "not_empty": ":количество:/:max: {{ grammaticalNumber(weapon, :max:) }}, всего :price:"
+            },
+            "edit_button": "Редактировать оружие",
+            "no_weapons_selected": "Оружие не выбрано"
+          },
+          "models": {
+            "title": "Модели",
+            "overview": {
+              "empty": ":количество:/:max: {{ grammaticalNumber(model, :max:) }}",
+              "not_empty": ":количество:/:max: {{ grammaticalNumber(model, :max:) }}, totalling :price:"
+            },
+            "change_model": "Изменить модель",
+            "edit_button": "Редактировать модель",
+            "import_button": "Импортировать модель",
+            "unable_to_find_name": "Не удается найти имя",
+            "fetching": "Поиск...",
+            "worth": "Стоит",
+            "model_source": {
+              "select": "Выберите модель",
+              "or": "or",
+              "go_to_selected_model": "Переход к выбранной модели"
+            },
+            "no_models_selected": "Нет выбранных моделей",
+            "import": {
+              "workshop": {
+                "overview": "Импортировать модель",
+                "title": "Workshop URL",
+                "subtitle": ":base: + 1МБ x :price:",
+                "continue_button": "Продолжить",
+                "invalid_url": "Некорректный URL",
+                "checks": {
+                  "awaiting": "Загрузка...",
+                  "banned": "Аддон для мастерской запрещен сервером!",
+                  "in_use": "Этот аддон уже используется в другой работе!"
+                },
+                "loading": {
+                  "loading_info": "Загрузка информации об аддоне",
+                  "error": "Ошибка мастерской. Код: :code:",
+                  "disabled": "Этот аддон отключен",
+                  "banned": "Этот аддон запрещен",
+                  "downloading": "Скачивание аддона",
+                  "unable_to_download": "Невозможно загрузить аддон",
+                  "mounting": "Установка аддона",
+                  "unable_to_mount": "Невозможно установить аддон",
+                  "no_files": "Аддон не содержит никаких файлов",
+                  "no_player_models": "Невозможно найти ни одной игровой модели"
+                }
+              },
+              "preview": {
+                "bodygroups": "Телосложение",
+                "price": "Цена"
+              }
+            }
+          },
+          "owners": {
+            "title": "Владельцы",
+            "overview": {
+              "title": ":amount: {{ grammaticalNumber(owner, :amount:) }}, :multiplier:x price",
+              "add_button": "Добавить владельцаr"
+            },
+            "add_owner": {
+              "input_placeholder": "SteamID64 нового владельца",
+              "no_player_name": "Нет игрока",
+              "primary_owner": "Основной",
+              "additional_owner": "Вторичный",
+              "fetching": "Поиск..."
+            }
+          },
+          "checkout": {
+            "title": "Оформить заказ",
+            "overview": "Поломка",
+            "unable_to_afford": "Не можете себе позволить",
+            "validation": {
+              "validating": "Валидирование профессии",
+              "waiting_for_server": "Ожидание сервера"
+            },
+            "fields": {
+              "name": {
+                "title": "Имя",
+                "empty": "Индивидуальная работа"
+              },
+              "salary": "Зарплата",
+              "health": "Дополнительное здоровье",
+              "armor": "Дополнительная броня",
+              "gun_license": "Лицензия на ношение оружия",
+              "weapons": "Оружие",
+              "models": "Модель",
+              "owner_multiplier": "Мультипликатор владельца",
+              "total": "Всего",
+              "button": "Купить Профессию",
+              "responses": [
+                "Успех!",
+                "Неизвестная ошибка",
+                "Неверная работа!",
+                "Вы не можете себе это позволить"
+              ],
+              "errors": [
+                "Имени нет",
+                "Имя слишком короткое",
+                "Имя слишком длинное",
+                "Имя содержит слово из черного списка",
+                "У работы нет зарплаты",
+                "Зарплата слишком низкая",
+                "Зарплата слишком высокая",
+                "У вакансии нет цвета",
+                "Цвет недействителен",
+                "У вас недействительное оружие",
+                "У вас слишком много оружия",
+                "У вас недействительная модель",
+                "У вас слишком много моделей",
+                "Вам нужна хотя бы 1 модель",
+                "У вас недействительный владелец",
+                "Здоровье недействительно",
+                "Здоровье слишком высокое",
+                "Броня недействительна",
+                "Броня слишком высока",
+                "Вы не можете себе этого позволить",
+                "У вас уже есть максимальное количество заданий",
+                "Аддон мастерской находится в списке запрещенных"
+              ]
+            },
+            "credits": {
+              "cancel": "Отмена",
+              "currency_format": "+:currency:"
+            }
+          }
+        }
+      },
+      "main_menu": {
+        "inspect": {
+          "worth": "Стоит",
+          "edit_job": "Редактировать работу",
+          "go_back": "Назад",
+          "delete": "Удалить",
+          "delete_modal": {
+            "title": "Удалить :name:",
+            "description": "Вы уверены, что хотите удалить эту работу? Это не вернет вам кредиты",
+            "yes": "Да",
+            "no": "Нет"
+          },
+          "fields": {
+            "name": "Имя",
+            "salary": "Зарплата",
+            "color": "Цвет"
+          }
+        },
+        "job": {
+          "inspect": "ПРОСМОТРЕТЬ",
+          "empty": "ПУСТО",
+          "create_new": "СОЗДАТЬ НОВЫЙ",
+          "disabled_job": "ОТКЛЮЧЕНО"
+        },
+        "tabs": {
+          "your_jobs": "ВАШИ РАБОТЫ",
+          "shared_jobs": "СОВМЕСТНЫЕ РАБОТЫ"
+        },
+        "credits": {
+          "you_have": "У вас есть"
+        }
+      },
+      "admin": {
+        "tabs": {
+          "job_management": {
+            "title": "Управление работой",
+            "subtitle": "Управление работами"
+          },
+          "job_approval": {
+            "title": "Утверждение работы",
+            "subtitle": "Утвердить отключенные работы"
+          },
+          "job_creator": {
+            "title": "Создатель работ",
+            "subtitle": "Создание работ вручную"
+          },
+          "job_editor": {
+            "title": "Редактор работ",
+            "subtitle": "Редактировать работу"
+          },
+          "workshop_bans": {
+            "title": "Workshop баны",
+            "subtitle": "Запретить аддоны мастерской"
+          },
+          "player_manager": {
+            "title": "Менеджер игроков",
+            "subtitle": "Управление игроками"
+          }
+        },
+        "job_inspector": {
+          "title": "Проверка работы",
+          "loading": "Загрузка"
+        },
+        "approval_queue": {
+          "top": {
+            "search": "Search by job name",
+            "manually_disabled_job": "Show manually disabled jobs"
+          },
+          "disabled_reasons": [
+            "Awaiting manual approvement",
+            "Disabled by an admin",
+            "Workshop model has changed, and the model is too small!",
+            "Workshop model has changed, and the model is too big!",
+            "Workshop model has changed, and the size change is too drastic!"
+          ],
+          "loading": "Loading",
+          "no_results": "No Results",
+          "popup": {
+            "inspect": "Inspect Job",
+            "accept": "Accept Job",
+            "decline": "Decline Job"
+          }
+        },
+        "create": {
+          "import": {
+            "button": "Import Lua Job",
+            "clear_button": "Clear Job",
+            "popup": {
+              "import_button": "Import Job",
+              "title": "Lua code",
+              "placeholder": "Paste the Lua code for the job you wish to import"
+            }
+          }
+        },
+        "bans": {
+          "search": "Search by id/name",
+          "add": {
+            "button": "Add Ban",
+            "modal": {
+              "title": "",
+              "ban_button": "Ban",
+              "info": {
+                "name": {
+                  "title": "Name",
+                  "content": ":title:"
+                },
+                "size": {
+                  "title": "Size",
+                  "content": ":size: MB"
+                },
+                "uniqueViews": {
+                  "title": "Unique Views",
+                  "content": ":views:"
+                },
+                "subscriptions": {
+                  "title": "Subscriptions",
+                  "content": ":subscriptions:"
+                },
+                "favorites": {
+                  "title": "Favourites",
+                  "content": ":favorites:"
+                },
+                "posted": {
+                  "title": "Posted",
+                  "content": "{{ fullDate(:epoch:) }}"
+                },
+                "last_updated": {
+                  "title": "Last Updated",
+                  "content": "{{ fullDate(:epoch:) }}"
+                }
+              }
+            }
+          },
+          "title": {
+            "filter": ":filterHits:/:total: {{ grammaticalNumber(addon, :total:) }} visible",
+            "normal": ":total: {{ grammaticalNumber(addon, :total:) }} banned"
+          },
+          "grid": {
+            "open_addon": {
+              "button": "Open Addon"
+            },
+            "remove_ban": {
+              "button": "Remove Ban",
+              "modal": {
+                "title": "Remove Ban",
+                "description": "Are you sure you want to remove the ban?",
+                "yes": "Yes",
+                "no": "No"
+              }
+            },
+            "id": "id: :id:"
+          }
+        },
+        "management": {
+          "top": {
+            "search": "Search by job name",
+            "offline_players": "Show offline players jobs"
+          },
+          "loading": "Loading",
+          "no_results": "No Results",
+          "subtitle": "Owned by :name: (:sid:)",
+          "popup": {
+            "inspect": "Inspect Job",
+            "enable": "Enable Job",
+            "disable": "Disable Job"
+          }
+        }
+      },
+      "hud": {
+        "fetching": "Fetching Info",
+        "status": [
+          "Starting Download",
+          "Downloading",
+          "Mounting",
+          "",
+          "Error"
+        ]
+      },
+      "config": {
+        "auto_update": "Auto Update",
+        "beta": "Beta",
+        "locked": "Locked to this version",
+        "changelogs": "Changelogs",
+        "lock": "Lock to this version",
+        "lock_modal": {
+          "title": "Lock to version :version:",
+          "description": "The addon will no longer auto update if you lock the version",
+          "yes": "Yes, that's fine",
+          "no": "Nevermind"
+        },
+        "loading": "Loading Versions",
+        "unable_to_load": "Unable to load versions remotely"
+      }
+    },
+    "notifications": {
+      "currency_given": {
+        "text": "You were given :amount:"
+      },
+      "disabled_job": {
+        "content": "Your [:jobName:] job has been automatically disabled due to a larger than allowed update for the workshop addon.\nIt has been put into the approval queue, and is awaiting an admin to look at it",
+        "popup": {
+          "view": {
+            "text": "View Job",
+            "loading": "Getting job from database"
+          }
+        }
+      }
+    },
+    "defaults": {
+      "custom_job": {
+        "description": "Custom Job",
+        "fail_message": "You don't own this job"
+      }
+    }
+  },
+  "functions": {
+    "grammaticalNumber": "local args = { ... }; local str = args[1]; local input = args[2]; return str .. (tonumber(input) != 1 and 's' or '')",
+    "fullDate": "local args = { ... }; local epoch = tonumber(args[1]); return os.date('%d %b, %Y @ %I:%M %p', epoch)"
+  }
+}
